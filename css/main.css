@@ -5,10 +5,102 @@
 @viewport { width: device-width; scale: 1; }
 
 html {
-  font: normal 100%/1.3 "Georgia", sans-serif;
+  font: normal 100%/1.3 Georgia, serif;
   box-sizing: border-box;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  background-color: #e2e2e2;
+  padding-bottom: 10px;
+}
+
+.img-flex {
+  width: 100%;
+  border: solid #fff 1px;
+  display: block;
+}
+
+.content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h2 {
+  font-family: "Denk One", sans-serif;
+  font-size: 1.5rem;
+}
+
+body {
+  margin: 0;
+}
+
+@media only screen and (min-width: 25em) {
+
+  html {
+    font-size: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.3;
+    color: #fff;
+  }
+
+  .wrapper {
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 0;
+  }
+
+  .content {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    max-width: 30em;
+    background-color: rgba(0, 0, 0, .3);
+    margin: 0;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.4;
+  }
+
+  .content {
+    max-width: 30em;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+    line-height: 1.5;
+  }
+
+  .content {
+    max-width: 30em;
+  }
+
 }
